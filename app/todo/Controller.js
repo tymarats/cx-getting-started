@@ -38,11 +38,10 @@ export default class extends Controller {
         });
 
         this.store.set('$page.todos', items);
-        this.store.set('$page.text', null);
+        this.store.delete('$page.text');
     }
 
     onRemove(e, {store}) {
-        e.preventDefault();
         var id = store.get('$record.id');
         var items = this.store.get('$page.todos');
         this.store.set('$page.todos', items.filter(item => item.id !== id));
