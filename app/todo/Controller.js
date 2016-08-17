@@ -3,7 +3,28 @@ import {Controller} from 'cx/ui/Controller';
 export default class extends Controller {
     init() {
         super.init();
-        this.store.set('$page.todos', []);
+        var items = this.store.get('$page.todos');
+        // Reset the list to default data if it's empty
+        if (!items || !items.length) {
+            items = [{
+                id: 1,
+                text: 'Get Cx boilerplate app',
+                done: true
+            }, {
+                id: 2,
+                text: 'Learn Cx'
+            }, {
+                id: 3,
+                text: 'Chose a CSS class prefix'
+            }, {
+                id: 4,
+                text: 'Tweak the layout if needed'
+            }, {
+                id: 5,
+                text: 'Create an application'
+            }];
+            this.store.set('$page.todos', items);
+        }
     }
 
     onAdd() {
