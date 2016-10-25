@@ -1,4 +1,4 @@
-# Getting started tutorial demo app.
+# Getting started tutorial demo app
 
 This repository contains source code for the demo application described in the Cx Getting Started tutorial.
 
