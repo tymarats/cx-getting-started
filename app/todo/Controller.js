@@ -15,12 +15,9 @@ export default class extends Controller {
                 text: 'Learn Cx'
             }, {
                 id: 3,
-                text: 'Chose a CSS class prefix'
-            }, {
-                id: 4,
                 text: 'Tweak the layout if needed'
             }, {
-                id: 5,
+                id: 4,
                 text: 'Create an application'
             }];
             this.store.set('$page.todos', items);
